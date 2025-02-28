@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reels Video Download</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .navbar {
+            background-color: white;
+            padding: 15px 50px;
+            text-align: left;
+        }
+        
+        .logo {
+            color: #9c4dff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .mainarea {
+            background:#8b43f2;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        
+        .download-form {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        input {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #00c853;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .download-icon {
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .content-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+        
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        
+       .content-section > h1 {
+            color: #344767;
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .content-section > p {
+            color: #67748e;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .instagram-logo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        .instruction-card {
+            width: 100%;
+            max-width: 800px;
+            background:#5940F1;
+            color: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-left: 350px;
+            margin-top: 50px;
+        }
+        
+        .instruction-card > h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+        }
+        
+        .step-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        .box {
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-top: 50px;
+            /* padding: 40px 20px; */
+        }
+        .box > h1 {
+            text-align: center;
+            color: #2a3d7f;
+            font-size: 42px;
+    font-weight: 600;
+    line-height: 46px;
+    margin: 0;
+    padding: 0;
+        }
+        
+       .feature-content > h1 {
+            color: #3f51b5;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .feature-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            /* margin-bottom: 60px; */
+            gap: 40px;
+        }
+        
+        .feature-section:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .feature-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .feature-image {
+            flex: 0 0 auto;
+            width: 250px;
+            height: 250px;
+        }
+        
+        .feature-image img, .feature-image svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        .feature-content > h2 {
+            color: #2a3d7f;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-content > p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+            max-width: 720px;
+            line-height: 28px;
+            margin: 0;
+            opacity: .8;
+            padding: 0;
+
+        }
+        .wrap {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    max-width: 800px;
+ 
+    overflow: hidden;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(269deg, #02c2fe, #db00ff 93.98%);
+    background-origin: border-box;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(0, 255, 255, 0.1)); */
+    border-radius: 20px;
+    pointer-events: none;
+  }
+  
+  .main-title {
+    text-align: center;
+    color: #2c3e85;
+    font-size: 32px;
+    margin-top: 40px;
+  }
+  
+  .benefit-row {
+    display: flex;
+    /* margin-bottom: 30px; */
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+  
+  .icon-box {
+    flex: 0 0 80px;
+    margin-right: 20px;
+  }
+  
+  .highlight-row .icon-box {
+    margin-right: 0;
+    margin-left: 20px;
+    order: 2;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .feature-icon {
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* .blue-bg {
+    background-color: #00bcd4;
+  }
+  
+  .orange-bg {
+    background-color: #ff7700;
+  }
+  
+  .yellow-bg {
+    background-color: #ffd600;
+  } */
+  
+  .benefit-title {
+    color: #2c3e85;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+  }
+  
+  .benefit-description {
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .highlight-row {
+    /* background-color: rgba(245, 245, 245, 0.5); */
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 40px;  }
+    .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .faq-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 255, 0.1);
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(269deg, #02c2fe, #db00ff 93.98%);
+    background-origin: border-box;
+    border: 1px solid transparent;
+  }
+  
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    /* background-clip: content-box, border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(269deg, #02c2fe, #db00ff 93.98%);
+    background-origin: border-box;
+    border: 1px solid transparent; */
+
+  }
+  
+  .faq-question::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(90deg, rgba(255, 0, 255, 0.05), rgba(0, 255, 255, 0.05)); */
+    pointer-events: none;
+  }
+  
+  .arrow-icon {
+    transition: transform 0.3s ease;
+    color: #666;
+  }
+  
+  .faq-item.active .arrow-icon {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-top: 0px solid transparent;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: 15px 20px;
+    max-height: 1000px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+  }
+  .site-footer {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 20px;
+    background-color: #fff;
+    color: #666;
+    border-top: 1px solid #eee;
+    width:100%;
+    margin: 0 auto;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  .footer-heading {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 15px;
+  }
+  
+  .footer-link:hover {
+    color: #333;
+  }
+  
+  .footer-disclaimer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  .copyright {
+    margin-top: 5px;
+    color: #999;
+  }
+  
+  .brand-link {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .brand-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+        @media (max-width: 768px) {
+            .download-form {
+                flex-direction: column;
+            }
+            
+            input,button {
+                width: 100%;
+            }
+    
+            h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .container {
+                flex-direction: column;
+            }
+            
+            .content-section > h1 {
+                font-size: 32px;
+            }
+            
+            .content-section, .image-section {
+                max-width: 100%;
+            }
+            .instruction-card {
+                padding: 30px;
+            }
+            
+           .instruction-card > h1 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            
+            .step-title {
+                font-size: 20px;
+            }
+            
+            .step-description {
+                font-size: 14px;
+            }
+            .instruction-card {
+            width: 100%;
+            max-width:350px;
+            background:#5940F1;
+            color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+        }
+        .feature-section, .feature-section:nth-child(odd) {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .feature-image {
+                margin: 0 auto;
+            }
+                    .feature-content > p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+            max-width: 420px;
+            line-height: 28px;
+            margin: 0;
+            opacity: .8;
+            padding: 0;
+            text-align: left;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .feature-section {
+    display: flex
+;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 60px; */
+    gap: 10px;
+}
+.feature-content > h2 {
+    color: #2a3d7f;
+    font-size: 28px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.benefit-row, .highlight-row {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .icon-box {
+      margin: 0 0 20px 0;
+    }
+    
+    .highlight-row .icon-box {
+      order: 1;
+      margin: 0 0 20px 0;
+    }
+    .faq-title {
+      font-size: 32px;
+    }
+    
+    .faq-question {
+      padding: 15px;
+      font-size: 14px;
+    }
+    .footer-container {
+      flex-direction: column;
+    }
+    
+    .footer-section {
+      margin-bottom: 30px;
+    }
+  
+  }
+
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Instagram</div>
+    </div>
+    
+    <div class="mainarea">
+        <h1>Instagram Reels Video Download</h1>
+        <p class="subtitle">Instagram - Reels Video Downloader</p>
+        
+        <form action="/download" method="post" class="download-form">
+            <input type="text" name="url" placeholder="Paste URL Instagram" required>
+            <button type="submit">
+                <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download
+            </button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="content-section">
+            <h1>Download Instagram Videos & Photos</h1>
+            <p>With sssInstagram, you can download high-quality photos and videos without limits! Download Videos, Photos, Stories, Reels, and album posts with multiple mixed-media files with one-click simplicity. Our downloader ensures you get original images in their original sizes without resizing. Plus, our story saver feature ensures that your favorite stories don't get lost after 24 hours. It's easy to download them for later viewing. We also have a carousel download feature that allows you to download up to 10 pictures and videos with a single click. Just copy and paste the link, and our downloader takes care of the rest. Get the best quality Instagram downloads with sssInstagram!</p>
+        </div>
+        <div class="image-section">
+                <img src="https://sssinstagram.com/images/ilogo.png?v=2">
+        </div>
+    </div>
+    <div class="instruction-card">
+        <h1>How to download from Instagram?</h1>
+        
+        <div class="step">
+            <div class="step-title">1. Copy the URL</div>
+            <div class="step-description">
+                Open the Instagram app or website, go to the photo, video, reels, carousel, or IGTV you want to download. Copy the URL.
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">2. Paste the link</div>
+            <div class="step-description">
+                Return to the SSSInstagram website, paste the link into the input field at the top of the page, and click the "Download" button to start downloading.
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-title">3. Download</div>
+            <div class="step-description">
+                Review the results and find the file you want to download. Click the "Download" button. Ready! The file is saved to your device.
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <h1>Instagram Downloader</h1>
+        
+        <div class="feature-section">
+            <div class="feature-image">
+                <img src="https://sssinstagram.com/images/downloader/video.svg">
+            </div>
+            <div class="feature-content">
+                <h2>Instagram Video Download</h2>
+                <p>We have made it easy to download videos from Instagram. All you have to do is insert the link and click the "Download" button. Our Video Downloader for Instagram is a revolutionary service that will save your favorite IG videos in the best quality. Our Video Downloader for Instagram is your perfect assistant for quick and easy access to the content you can't live without.</p>
+            </div>
+           
+        </div>
+        
+        <div class="feature-section">
+            <div class="feature-image">
+            
+                <img src="https://sssinstagram.com/images/downloader/photo.svg">
+            </div>
+            <div class="feature-content">
+                <h2>Instagram Photo Downloader</h2>
+                <p>Swipe away all your worries about downloading Instagram photos with our Instagram photo downloader! With just one click away, you can get the highest image quality in the original photo link, no need for resizing. Get the highest quality photos with no fuss - get the best photos with one click! 📱</p>
+            </div>
+
+            <div class="feature-section">
+                <div class="feature-content">
+                    <h2>Instagram Reels Download</h2>
+                    <p>Save your favorite Instagram Reels quickly and easily with our Reels Downloader. Enjoy high-quality downloads at no cost, with no limits on the number of videos you can save. Simply copy the Reels URL, paste it into our downloader, and click download. It's that simple! Experience fast, secure, and hassle-free downloads today and enjoy your favorite Reels offline anytime, anywhere.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://sssinstagram.com/images/downloader/reels.svg">
+                </div>
+            </div>
+
+            <div class="feature-section">
+                
+                <div class="feature-content">
+                    <h2>Carousel Download</h2>
+                    <p>👉🏻 Download Carousel posts from Instagram with ease! The Carousel Downloader for Instagram is your go-to tool for downloading those essential Instagram Carousel posts. Don't wait to save those must-have posts for offline use - this expert, online downloader takes care of it for you with ease. 🙌 Try it out today, and never worry about missing a carousel post again!</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://sssinstagram.com/images/downloader/carousel.svg">
+                </div>
+            </div>
+            
+            <div class="feature-section">
+                <div class="feature-content">
+                    <h2>Story Saver</h2>
+                    <p>Don't miss out on your favorite Instagram stories ever again! Our Instagram Story Downloader is the perfect solution to save, watch, and reuse stories even after their 24 hours limit. Download your favorite stories in just a few simple clicks - no app required! Plus, no time and no limit restrictions! Get ready to take control of your Instagram stories and make sure you never miss another one with sssInstagram!</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://sssinstagram.com/images/downloader/story.svg">
+                </div>
+            </div>
+
+            <div class="feature-section">
+                
+                <div class="feature-content">
+                    <h2>IGTV Download</h2>
+                    <p>Easily download IGTV videos with our fast and free IGTV Downloader. Save high-quality videos by simply copying the IGTV video URL, pasting it into our downloader, and clicking download. Enjoy unlimited downloads without any hassle. Our tool is secure and user-friendly, making it the perfect solution for offline viewing of your favorite IGTV content anytime, anywhere. Try it now!</p>
+                </div>
+                <div class="feature-image">
+                    <img src="https://sssinstagram.com/images/downloader/igtv.svg">
+                </div>
+            </div>
+        </div>
+   
+    </div>
+    <div class="wrap">
+        <div class="service-card">
+          <h1 class="main-title">Why SSSInstagram?</h1>
+          
+          <div class="benefit-row">
+            <div class="icon-box">
+              <img src="https://sssinstagram.com/images/why/unlimited.svg" alt="Download icon" class="feature-icon blue-bg" />
+            </div>
+            <div class="text-content">
+              <h2 class="benefit-title">Unlimited download</h2>
+              <p class="benefit-description">Watch and download photos, videos, reels, IGTV, Highlights in original resolution and quality without restrictions! Download as many videos and photos as you want every day.</p>
+            </div>
+          </div>
+          
+          <div class="benefit-row highlight-row">
+            <div class="text-content">
+              <h2 class="benefit-title">100% Anonymous</h2>
+              <p class="benefit-description">Stay completely anonymous when browsing and downloading from Instagram! Our service allows you to do this without taking any data from your Instagram accounts.</p>
+            </div>
+            <div class="icon-box">
+              <img src="https://sssinstagram.com/images/why/anonymous.svg" alt="Sunglasses icon" class="feature-icon orange-bg" />
+            </div>
+          </div>
+          
+          <div class="benefit-row">
+            <div class="icon-box">
+              <img src="https://sssinstagram.com/images/why/fast.svg" alt="Lightning icon" class="feature-icon yellow-bg" />
+            </div>
+            <div class="text-content">
+              <h2 class="benefit-title">Fast, safe & completely free</h2>
+              <p class="benefit-description">SSSInstagram works in any web browser (Chrome, Firefox, Opera) and on any device (computer, tablet, Android, and iOS phones). Our service is fully automated and free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq-container">
+        <h1 class="faq-title">FAQ</h1>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is there a limit to how many Instagram photos and videos I can download?</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>No, there is no limit to how many Instagram photos and videos you can download using our service. You can download as many posts as you want, completely free of charge.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is an Instagram video downloader?</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>An Instagram video downloader is a web-based tool that allows you to save videos from Instagram to your device. Simply paste the link to the Instagram post, and our service will extract the video for you to download in the highest quality available.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I download Instagram Stories using this tool?</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, you can download Instagram Stories using our tool. Just copy the URL of the Story and paste it into our downloader. The tool works with regular Stories, Highlights, and even disappearing content.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need to install any software to use the Instagram downloader?</span>
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M7 10l5 5 5-5H7z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>No, you don't need to install any software. Our Instagram downloader works directly in your web browser on any device, including computers, tablets, and smartphones. It's a completely online tool with no downloads or installations required.</p>
+          </div>
+        </div>
+      </div>
+     
+      <script>
+        // Add this JavaScript to make the FAQ items expand/collapse
+        document.addEventListener('DOMContentLoaded', function() {
+          const faqItems = document.querySelectorAll('.faq-item');
+          
+          faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+              // Close all other items
+              faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                  otherItem.classList.remove('active');
+                }
+              });
+              
+              // Toggle current item
+              item.classList.toggle('active');
+            });
+          });
+        });
+      </script>
+       <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3 class="footer-heading">Tools</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Instagram Story Downloader</a></li>
+              <li><a href="#" class="footer-link">Instagram Reels Downloader</a></li>
+              <li><a href="#" class="footer-link">Instagram profile picture Downloader</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3 class="footer-heading">Support</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3 class="footer-heading">Legal</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Terms of Service</a></li>
+              <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+          <p>We are not affiliated with Instagram or Meta.</p>
+          <p class="copyright">© 2025 <a href="#" class="brand-link">Snapinst</a> 4.0.0 (252). All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
